@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace BillingManagement.Models
+namespace BillingManagement.Business
 {
     interface IDataService<T>
     {
