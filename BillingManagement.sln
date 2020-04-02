@@ -5,6 +5,7 @@ VisualStudioVersion = 16.0.29709.97
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BillingManagement.UI", "BillingManagement.UI\BillingManagement.UI.csproj", "{508AF97C-C689-4057-851B-B163F89FCC77}"
 	ProjectSection(ProjectDependencies) = postProject
+		{FA5127D6-036D-4E99-8BCB-0A1504D7AFBF} = {FA5127D6-036D-4E99-8BCB-0A1504D7AFBF}
 		{58FEC7DF-7358-4AFF-BFEC-225473BF7854} = {58FEC7DF-7358-4AFF-BFEC-225473BF7854}
 	EndProjectSection
 EndProject

@@ -9,6 +9,11 @@ namespace BillingManagement.Business
 
         public CustomersDataService()
         {
+            this.initValues();
+        }
+
+        private void initValues()
+        {
             customers = new List<Customer>()
             {
                 new Customer() {Name="Ayanna", LastName="Vargas",Address="401-3122 Nullam Ave", City="Pickering",Province="ON", PostalCode="N6C 7M5", PicturePath="images/user.png", ContactInfo="Work : 624-767-4994"},

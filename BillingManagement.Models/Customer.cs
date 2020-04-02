@@ -1,12 +1,12 @@
-﻿using System;
-using System.Collections.ObjectModel;
+﻿using System.Collections.ObjectModel;
 using System.ComponentModel;
 using System.Runtime.CompilerServices;
 
 namespace BillingManagement.Models
 {
-    public class Customer : INotifyPropertyChanged
+    public class Customer : BaseViewModel
     {
+
         private string name;
         private string lastName;
         private string address;
@@ -88,12 +88,5 @@ namespace BillingManagement.Models
         }
 
         public ObservableCollection<ContactInfo> ContactInfos { get; set; }
-
-        public event PropertyChangedEventHandler PropertyChanged;
-
-        protected virtual void OnPropertyChanged([CallerMemberName]string propertyName = null)
-        {
-            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
-        }
     }
 }

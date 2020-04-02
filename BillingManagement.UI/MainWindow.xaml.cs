@@ -1,4 +1,5 @@
-﻿using BillingManagement.Models;
+﻿using BillingManagement.Business;
+using BillingManagement.Models;
 using System;
 using System.Collections.ObjectModel;
 using System.ComponentModel;
@@ -13,7 +14,7 @@ namespace BillingManagement.UI
     /// </summary>
     public partial class MainWindow : Window, INotifyPropertyChanged
     {
-        CustomersDataService customersDataService = new CustomersDataService();
+        CustomersDataService customersDataService;
 
         private ObservableCollection<Customer> customers;
         private Customer selectedCustomer;
@@ -51,8 +52,8 @@ namespace BillingManagement.UI
 
         private void InitValues()
         {
+            customersDataService = new CustomersDataService();
             Customers = new ObservableCollection<Customer>(customersDataService.GetAll());
-            Debug.WriteLine(Customers.Count);
         }
 
         private void CustomerNew_Click(object sender, RoutedEventArgs e)
