@@ -12,6 +12,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\BillingManagement.Business\BillingManagement.Business.csproj" />
+    <ProjectReference Include="..\BillingManagement.Models\BillingManagement.Models.csproj" />
   </ItemGroup>
 
   <ItemGroup>

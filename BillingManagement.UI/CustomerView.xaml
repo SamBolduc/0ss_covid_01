@@ -1,13 +1,12 @@
-﻿<Window x:Class="BillingManagement.UI.MainWindow"
+﻿<Window x:Class="BillingManagement.UI.CustomerView"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:local="clr-namespace:BillingManagement.Models"
+        xmlns:local="clr-namespace:BillingManagement.UI"
         mc:Ignorable="d"
         Title="Gestion de clients" Width="800" Height="500"
-        MinHeight="500" MinWidth="640"
-        DataContext="{Binding RelativeSource={RelativeSource self}}">
+        MinHeight="500" MinWidth="640">
     <DockPanel>
         <StackPanel DockPanel.Dock="Top">
             <Menu>
@@ -16,7 +15,7 @@
                     <MenuItem Header="_Sauvegarder"/>
                     <MenuItem Header="_Fermer"/>
                     <Separator/>
-                    <MenuItem Header="_Nouveau client" Click="CustomerNew_Click"/>
+                    <MenuItem Header="_Nouveau client" />
                     <Separator/>
                     <MenuItem Header="_Quitter"/>
                 </MenuItem>
@@ -48,7 +47,7 @@
                 </Grid.RowDefinitions>
                 <StackPanel Margin="6" Orientation="Horizontal" x:Name="spHeader">
                     <TextBlock Text="Liste des clients" />
-                    <Button Content="Nouveau client" Margin="6 0" Click="CustomerNew_Click"/>
+                    <Button Content="Nouveau client" Margin="6 0" Click="CustomerNew_Click" />
                 </StackPanel>
                 <ListView Grid.Row="1" ItemsSource="{Binding Customers}"
                           SelectedItem="{Binding SelectedCustomer}"
@@ -113,7 +112,7 @@
 
                 </StackPanel>
                 <StackPanel Grid.Row="6" Grid.Column="2" Margin="6">
-                    <Button Content="Supprimer client" Click="CustomerDelete_Click"/>
+                    <Button Content="Supprimer client" Click="CustomerDelete_Click" />
                 </StackPanel>
                 <Image Margin="6" Grid.Row="7"
                        Source="{Binding SelectedCustomer.PicturePath}"

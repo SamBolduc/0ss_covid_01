@@ -4,7 +4,7 @@ using System.Runtime.CompilerServices;
 
 namespace BillingManagement.Models
 {
-    public class Customer : BaseViewModel
+    public class Customer : INotifyPropertyChanged
     {
 
         private string name;
@@ -15,6 +15,8 @@ namespace BillingManagement.Models
         private string postalCode;
         private string picturePath;
         private string contactInfo;
+
+        public event PropertyChangedEventHandler PropertyChanged;
 
         public string Name
         {
@@ -88,5 +90,10 @@ namespace BillingManagement.Models
         }
 
         public ObservableCollection<ContactInfo> ContactInfos { get; set; }
+
+        protected virtual void OnPropertyChanged([CallerMemberName]string propertyName = null)
+        {
+            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
+        }
     }
 }

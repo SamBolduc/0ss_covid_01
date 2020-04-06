@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Configuration;
-using System.Data;
-using System.Linq;
-using System.Threading.Tasks;
+﻿using BillingManagement.UI.ViewModels;
 using System.Windows;
 
 namespace BillingManagement.UI
@@ -13,5 +8,13 @@ namespace BillingManagement.UI
     /// </summary>
     public partial class App : Application
     {
+        CustomerView _wnd;
+
+        public App()
+        {
+            CustomerViewModel vm = new CustomerViewModel();
+            _wnd = new CustomerView(vm);
+            _wnd.Show();
+        }
     }
 }
