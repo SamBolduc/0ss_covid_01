@@ -37,5 +37,10 @@ namespace BillingManagement.UI
             lvCustomers.SelectedIndex = currentIndex;
 
         }
+        
+        private void LeaveApp(object sender, RoutedEventArgs e)
+        {
+            App.Current.Shutdown();
+        }
     }
 }
